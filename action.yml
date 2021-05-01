@@ -17,7 +17,6 @@ inputs:
 
   zip_files:
     description: Specific files to include in ZIP (to exclude temp files for example).
-      
     required: false
 
   zip_command:
