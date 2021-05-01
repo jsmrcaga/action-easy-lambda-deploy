@@ -2,9 +2,6 @@ name: 'Easy AWS Lambda Deploy'
 author: 'Jo Colina'
 description: |
   A simple GitHub action to allow updating a lambda function.
-  Uses aws-cli internally and zips your files automatically.
-
-  Needs AWS environment variables for authentication
 
 inputs:
   function_name:
