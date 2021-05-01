@@ -1,0 +1,35 @@
+name: 'Easy AWS Lambda Deploy'
+author: 'Jo Colina'
+description: |
+  A simple GitHub action to allow updating a lambda function.
+  Uses aws-cli internally and zips your files automatically.
+
+  Needs AWS environment variables for authentication
+
+inputs:
+  function_name:
+    description: Name of your lambda function
+    required: true
+
+  region:
+    description: Region where your lambda is deployed
+    required: true
+
+  zip_files:
+    description: Specific files to include in ZIP (to exclude temp files for example).
+      
+    required: false
+
+  zip_command:
+    description: |
+      Specific "zip" command to run
+      This will override zip_files
+    required: false
+
+runs:
+  using: docker
+  image: 'Dockerfile'
+
+branding:
+  color: orange
+  icon: cloud-lightning
