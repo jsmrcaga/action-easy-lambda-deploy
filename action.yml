@@ -8,6 +8,10 @@ inputs:
     description: Name of your lambda function
     required: true
 
+  cwd:
+    description: Directory to work on. Relative to root
+    required: false
+
   region:
     description: Region where your lambda is deployed
     required: true

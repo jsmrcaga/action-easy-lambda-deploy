@@ -1,11 +1,17 @@
 #!/bin/bash
 FUNCTION_NAME=$INPUT_FUNCTION_NAME
+CWD=$INPUT_CWD
 REGION=$INPUT_REGION
 ZIP_COMMAND=$INPUT_ZIP_COMMAND
 ZIP_FILES=$INPUT_ZIP_FILES
 
 ZIP_FILENAME="easy-lambda-deploy.zip"
 BASIC_ZIP="zip -r $ZIP_FILENAME"
+
+if [[ -n $CWD ]]
+then
+	cd $CWD
+fi
 
 # Choose zip command to run
 if [[ -n $ZIP_COMMAND ]]
